@@ -39,8 +39,37 @@
         }
         window.document.writeln("</ol>");
 
-        // Exercice 2:(15 min)
+        
     </script>
+
+
+
+
+
+<script>
+    // Exercice 2:(15 min)
+     var cars = new Array(
+        new Array("1","BMW","X2","Allemagne"),
+        new Array("2","Renault","Kadgar","France"),
+        new Array("3","Ford","Fiesta","USA")
+     );
+
+
+    window.document.writeln("<table border=1 align=center>");
+    window.document.writeln("<tr><th>ID</th><th>Marque</th><th>Modele</th><th>Pays</th></tr>");
+
+        for(cpt = 0; cpt < cars.length ; cpt ++)
+        {
+            window.document.writeln("<tr>");
+            for(i = 0; i < cars[cpt].length ; i ++)
+              {  
+                window.document.writeln("<td>"+cars[cpt][i]+"</td>"); 
+             }
+            window.document.writeln("</tr>"); 
+        }
+    window.document.writeln("<caption align=bottom>Fig.1 Liste des mes voitures</caption>");
+    window.document.writeln("</table>");
+</script>
 </body>
 
 </html>
