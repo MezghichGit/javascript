@@ -98,6 +98,49 @@
     window.document.writeln("</table>");
 
 </script>
+
+
+<script>
+    var a = "12.5RF";
+    window.document.writeln("\< a \> :" +a);
+    window.document.writeln("<br/>");
+    window.document.writeln("Parsing de  \< a \>  avec ParseFloat :" +parseFloat(a));
+    window.document.writeln("<br/>");
+    window.document.writeln("Parsing avec \< a \>  ParseInt :" +parseInt(a));
+
+    var b = 12;  // numeric
+
+    window.document.writeln("<br/>");
+
+    window.document.writeln(b+10);
+    b = String(b);
+    window.document.writeln(b+10);
+
+</script>
+<script>
+document.writeln("<br/>"); 
+var a = prompt("Donner un premier nombre","x");
+        var x = Number(a);
+        if (x > 5) {
+           x = x - 5;
+        } else {
+            x = x + 5;
+        }
+        document.writeln("x : "+x);
+        document.writeln("<br/>"); 
+        var b = prompt("Donner un deuxième nombre","y");
+        var y = Number(b);
+        if (y > 10) {
+           y = y - 10;
+        } else {
+            y = y + 10;
+        }
+        var res = x + y
+        document.writeln("y : "+y);
+        document.writeln("<br/>"); 
+        document.writeln("Resultat : "+res);
+
+</script>
 </body>
 
 </html>
