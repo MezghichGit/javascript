@@ -1,0 +1,44 @@
+<html>
+
+<head>
+
+    <script language="Javascript" type="text/Javascript" src="util.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+    <h1 align="center">Cours Javascript</h1>
+
+    <script>
+        //var res = info();
+        //console.log(res);
+        //alert(res);
+        //var x = prompt("Donner votre nom","Your name");
+        //alert("Vous avez taper : "+x); // message mixte
+        // Exercice 1 
+        /*
+        var a = prompt("Donner un premier nombre","a");
+        var b = prompt("Donner un deuxième nombre","b");
+        var res = Number(a)+Number(b);
+        document.writeln("La somme : "+res);*/
+
+        // Les Objets en Javascript
+        
+        var names = new Array("Alexandre","Amine","Jean","Alix");
+        var cpt;
+
+        window.document.writeln("<ol>");
+        for(cpt = 0; cpt < names.length ; cpt ++)
+        {
+            
+            window.document.writeln("<li>"+names[cpt]+"</li>");
+        }
+        window.document.writeln("</ol>");
+    </script>
+</body>
+
+</html>
