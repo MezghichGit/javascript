@@ -2,7 +2,7 @@
 
 function info()
 {
-    return "Hello Dears Students! Next course will be Jquery and Ajax";
+    alert("Hello Dears Students! Next course will be Jquery and Ajax");
 }
 /*
 function affichage()

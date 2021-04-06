@@ -13,6 +13,8 @@
 <body>
     <h1 align="center">Cours Javascript</h1>
 
+    <input type="button" value="Cliquer ici" onclick="info()"/>
+
     <script>
         //var res = info();
         //console.log(res);
@@ -118,6 +120,7 @@
 
 </script>
 <script>
+/*
 document.writeln("<br/>"); 
 var a = prompt("Donner un premier nombre","x");
         var x = Number(a);
@@ -139,7 +142,25 @@ var a = prompt("Donner un premier nombre","x");
         document.writeln("y : "+y);
         document.writeln("<br/>"); 
         document.writeln("Resultat : "+res);
+*/
+</script>
 
+<script>
+    var phrase = "Bienvue au cours Javascript uml Javascript";
+    // EX 1 : Déterminer la position de Javascript dans la chaine phrase
+
+    var x = phrase.indexOf("Javascript");
+    alert("x = "+ x);
+    var y = phrase.lastIndexOf("uml");
+    alert("y = "+ y);
+
+    // EX 2 : Extraction d'une sous-chaine
+
+	var str="Javascript"; 
+    var str1 = str.substring(6);
+    var str2 = str.substring(0,4);  
+    alert("str1 = "+ str1);
+    alert("str2 = "+ str2);
 </script>
 </body>
 
