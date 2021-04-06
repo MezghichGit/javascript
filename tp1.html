@@ -71,8 +71,32 @@
     window.document.writeln("</table>");
 </script>
 
+<br/><br/><br/>
 <script>
-    // Exercice 3:(15 min)
+    // Exercice 3:(5 min)
+
+     var candidats = new Array(
+        new Array("1","Valjean","Emile","lala@gmail.com","0876544"),
+        new Array("2","Tintin","Rin","hop@yahoo.fr","098675343"),
+        new Array("3","Lol","Jean","bloblo@orange.fr","023567876")
+     );
+
+
+    window.document.writeln("<table border=1 align=center>");
+    window.document.writeln("<tr><th>Id</th><th>Nom</th><th>Prenom</th><th>Email</th><th>Telephone</th></tr>");
+
+        for(cpt = 0; cpt < candidats.length ; cpt ++)
+        {
+            window.document.writeln("<tr>");
+            for(i = 0; i < candidats[cpt].length ; i ++)
+              {  
+                window.document.writeln("<td>"+candidats[cpt][i]+"</td>"); 
+             }
+            window.document.writeln("</tr>"); 
+        }
+    window.document.writeln("<caption align=bottom>Fig.2 Liste des candidats</caption>");
+    window.document.writeln("</table>");
+
 </script>
 </body>
 
