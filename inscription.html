@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript</title>
+    <script>
+        function valid()
+        {
+           
+            var nom = document.inscription.nom.value;
+            var prenom = document.inscription.prenom.value
+
+            alert("Nom = "+ nom + " Prenom = "+prenom);
+        }
+    </script>
+</head>
+
+<body>
+    <h1 align="center">Validation des formulaires</h1>
+
+    <h3 align="center">Formulaire d'inscription</h3>
+
+    <form name="inscription">
+        <table align="center">
+            <tr>
+                <td>Nom</td>
+                <td><input type="text" name="nom" placeholder="taper votre nom"/></td>
+            </tr>
+            <tr>
+                <td>Prenom</td>
+                <td><input type="text" name="prenom" placeholder="taper votre prenom"/></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="Annuler"/></td>
+                <td><input type="button" value="S'inscrire" onclick="valid()"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
