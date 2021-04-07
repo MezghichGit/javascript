@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<meta charset="UTF-8"/>
+<html>
+
+<head>
+    <title>Javascript</title>
+    <script>
+        function monProfil() {
+
+            for (var i = 0; i < document.forms[0].profil.length; i++)
+                if (document.forms[0].profil[i].checked)
+                    alert("Vous êtes un développeur : " + document.forms[0].profil[i].value);
+
+        }
+
+        function monProfil2() {
+
+            for (var i = 0; i < document.forms[1].framework.length; i++)
+                if (document.forms[1].framework[i].checked)
+                    alert("Vous êtes un développeur : " + document.forms[1].framework[i].value);
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1 align="center">Les boutons Radio</h1>
+
+
+    <form>
+        <div align="center">
+            <fieldset style="width: 10%;">
+                <legend>Profil</legend>
+                <table align="left">
+                    <tr>
+                        <td><input type="radio" name="profil" value="Frontend" /></td>
+                        <td>FrontEND</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="profil" value="Backend" /></td>
+                        <td>BackEND</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="radio" name="profil" value="Les deux" /></td>
+                        <td>Les DEUX</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Profil" onclick="monProfil()" /></td>
+                    </tr>
+
+                </table>
+            </fieldset>
+        </div>
+    </form>
+
+<br/><br/>
+    <form>
+        <div align="center">
+            <fieldset style="width: 10%;">
+                <legend>Framework</legend>
+                <table align="left">
+                    <tr>
+                        <td><input type="radio" name="framework" value="Angular" /></td>
+                        <td>Angular</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="framework" value="Spring" /></td>
+                        <td>Spring</td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="radio" name="framework" value="Les deux" /></td>
+                        <td>Les DEUX</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Framework" onclick="monProfil2()" /></td>
+                    </tr>
+
+                </table>
+            </fieldset>
+        </div>
+    </form>
+
+</body>
+
+</html>
