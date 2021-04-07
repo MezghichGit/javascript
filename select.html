@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<html>
+
+<head>
+    <title>Javascript</title>
+    <script>
+        function choice() {
+            var indice = document.myform.framework.selectedIndex;  // indice de l'élément choisie du select
+            
+            //alert("indice = " + indice);
+
+            var monChoixText =   document.myform.framework.options[indice].text;
+            var monChoixValue =   document.myform.framework.options[indice].value;
+
+
+            alert("votre framework = " + monChoixText + " " + monChoixValue);
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myform">
+        <div align="center">
+            <fieldset style="width: 10%;">
+
+                <legend>Choisir un Framework</legend>
+                <select name="framework">
+                    <option value="anr">Angular</option>
+                    <option value="sb">Spring Boot</option>
+                    <option value="sf">Symfony</option>
+                    <option value="vue">VueJS</option>
+                </select>
+                <br /><br />
+                <input type="button" value="Framework" onclick="choice()" />
+            </fieldset>
+        </div>
+    </form>
+
+</body>
+
+</html>
