@@ -9,6 +9,23 @@
 
             var nom = document.inscription.nom.value;
             var prenom = document.inscription.prenom.value
+
+            if(document.inscription.formation[0].checked)
+            {
+                alert("Vous préférer une formation : "+ document.inscription.formation[0].value);
+            }
+
+            else if(document.inscription.formation[1].checked)
+            {
+                alert("Vous préférer une formation : "+ document.inscription.formation[1].value);
+            }
+            else if(document.inscription.formation[2].checked)
+            {
+                alert("Vous préférer une formation : "+ document.inscription.formation[2].value);
+            }
+
+
+            
             if (nom.length == 0 && prenom.length != 0) {
                 alert("Champs nom vide");
             }
@@ -87,7 +104,7 @@
     <!-- Exercice 1 -->
     <form name="inscription">
         <div align="center">
-            <fieldset style="width: 20%;">
+            <fieldset style="width: 30%;">
                 <legend>Exercice 1</legend>
                 <table align="center">
                     <tr>
@@ -98,8 +115,19 @@
                         <td>Prenom</td>
                         <td><input type="text" name="prenom" placeholder="taper votre prenom" /></td>
                     </tr>
+
                     <tr>
-                        <td><input type="reset" value="Annuler" /></td>
+                        <td>Vous préférer une formation</td>
+                        <td>
+                            <input type="checkbox" name="formation" value="En ligne"/> En ligne
+                            <input type="checkbox" name="formation" value="Présentielle"/> Présentielle
+                            <input type="checkbox" name="formation" value="Les deux"/> Les deux
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td><input type="reset" value="Annuler" style="float:right"/></td>
                         <td><input type="button" value="S'inscrire" onclick="valid()" /></td>
                     </tr>
                 </table>
