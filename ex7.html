@@ -8,6 +8,8 @@
             var compteur = 0;  // sauvegarder le nombre de cases cochées
             var score = 0;
 
+            // version 1 avec different name du checkbox
+            /*
             if (document.forms[0].case1.checked) {    // compteur = 1; score = -8
                 compteur++;
                 score = score+ Number(document.forms[0].case1.value);
@@ -50,8 +52,18 @@
                 compteur++;
                 score += Number(document.forms[0].case10.value);
             }
+             */
 
-            //alert("Compteur = " + compteur);
+            //version avec le même name
+
+            for(var i = 0; i< document.forms[0].case.length;i++)
+            {
+                if (document.forms[0].case[i].checked) {
+                    compteur++;
+                    score += Number(document.forms[0].case[i].value);
+                }
+
+            }
             if (compteur == 3) {
                 if (score >= 15) { alert("Vous êtes déjà un joueur expert, Votre score est = " + score); }
                 else {
@@ -77,43 +89,43 @@
                 <legend>Cocher 3 cases</legend>
                 <table align="left">
                     <tr>
-                        <td><input type="checkbox" name="case1" value="-8" /></td>
+                        <td><input type="checkbox" name="case" value="-8" /></td>
                         <td>Case 1</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="case2" value="5" /></td>
+                        <td><input type="checkbox" name="case" value="5" /></td>
                         <td>Case 2</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="case3" value="3" /></td>
+                        <td><input type="checkbox" name="case" value="3" /></td>
                         <td>Case 3</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="case4" value="10" /></td>
+                        <td><input type="checkbox" name="case" value="10" /></td>
                         <td>Case 4</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="case5" value="0" /></td>
+                        <td><input type="checkbox" name="case" value="0" /></td>
                         <td>Case 5</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="case6" value="-1" /></td>
+                        <td><input type="checkbox" name="case" value="-1" /></td>
                         <td>Case 6</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="case7" value="-7" /></td>
+                        <td><input type="checkbox" name="case" value="-7" /></td>
                         <td>Case 7</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="case8" value="15" /></td>
+                        <td><input type="checkbox" name="case" value="15" /></td>
                         <td>Case 8</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="case9" value="8" /></td>
+                        <td><input type="checkbox" name="case" value="8" /></td>
                         <td>Case 9</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="case10" value="3" /></td>
+                        <td><input type="checkbox" name="case" value="3" /></td>
                         <td>Case 10</td>
                     </tr>
                     <tr>
