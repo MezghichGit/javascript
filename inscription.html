@@ -27,6 +27,33 @@
            else
             alert("Nom = "+ nom + " Prenom = "+prenom);
         }
+
+
+
+        function validex2()
+        {
+            //var x = null;
+           
+            var nom = document.inscription.nom.value;
+            var prenom = document.inscription.prenom.value
+            if(nom.length==0 && prenom.length !=0 )
+            {
+                alert("Champs nom vide");
+            }
+            
+           else if(prenom.length==0 && nom.length !=0 )
+            {
+                alert("Champs prenom vide");
+            }
+
+           else if(prenom.length==0 && nom.length==0  )
+            {
+                alert("Champs nom et prenom vides");
+            }
+           else
+            alert("Nom = "+ nom + " Prenom = "+prenom);
+        }
+
     </script>
 </head>
 
@@ -35,6 +62,7 @@
 
     <h3 align="center">Formulaire d'inscription</h3>
 
+    <!-- Exercice 1 -->
     <form name="inscription">
         <table align="center">
             <tr>
@@ -51,6 +79,28 @@
             </tr>
         </table>
     </form>
+
+    <!-- Exercice 2 -->
+
+    <form name="ex2">
+        <table align="center">
+            <tr>
+                <td>Nom</td>
+                <td><input type="text" name="nom" placeholder="taper votre nom"/></td>
+            </tr>
+            <tr>
+                <td>Prenom</td>
+                <td><input type="text" name="prenom" placeholder="taper votre prenom"/></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="Annuler"/></td>
+                <td><input type="button" value="S'inscrire" onclick="validex2()"/></td>
+            </tr>
+        </table>
+    </form>
+
+
+
 </body>
 
 </html>
