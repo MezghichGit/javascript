@@ -6,10 +6,25 @@
     <script>
         function valid()
         {
+            //var x = null;
            
             var nom = document.inscription.nom.value;
             var prenom = document.inscription.prenom.value
+            if(nom.length==0 && prenom.length !=0 )
+            {
+                alert("Champs nom vide");
+            }
+            
+           else if(prenom.length==0 && nom.length !=0 )
+            {
+                alert("Champs prenom vide");
+            }
 
+           else if(prenom.length==0 && nom.length==0  )
+            {
+                alert("Champs nom et prenom vides");
+            }
+           else
             alert("Nom = "+ nom + " Prenom = "+prenom);
         }
     </script>
