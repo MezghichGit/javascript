@@ -30,6 +30,8 @@
 
     <input type="button" onclick="display()" value="Afficher"/>
 
+    <input type="button" onclick="addP()" value="Ajouter paragraphe"/>
+
     <script>
         function display(){
             // méthode 1 : using getElementsByClassName
@@ -42,6 +44,13 @@
             var content = document.querySelector(".myClass");  // cette méthode retourne un Node (un seul, le premier rencontré)
             var js = content.innerHTML;
             alert(js);
+        }
+
+        function addP(){
+            var monpara = document.createElement('p');
+            var textpara = document.createTextNode("Le DOM");
+            monpara.appendChild(textpara);
+            document.body.appendChild(monpara);
         }
 
         //1- fonction getElementById
