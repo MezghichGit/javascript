@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>DOM</title>
+    <meta charset="UTF-8" />
+   <style>
+       .myClass{
+           color:red;
+           font-weight: bold;
+       }
+   </style>
+</head>
+
+<body>
+
+    <h1 id="titre">Cours Javascript chapitre 2 : La Manipulation du DOM</h1>
+
+    <p id="github">Consulter mon github sur le lien suivant : <a href="https://github.com/MezghichGit/javascript">https://github.com/MezghichGit/javascript</a></p>
+    <p>Les méthodes manipulant le DOM</p>
+    <p>getElemntById</p>
+    <p>getElemntsByTagName</p>
+
+    <h2>Liste des modules</h2>
+    <ul>
+        <li>html <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3">cliquer</a></li>
+        <li>css <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3">cliquer</a></li>
+        <li class="myClass">javascript <a href="https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript">cliquer</a></li>
+    </ul>
+
+
+    <input type="button" onclick="display()" value="Afficher"/>
+
+    <script>
+        function display(){
+            // méthode 1 : using getElementsByClassName
+            /*
+            var content = document.getElementsByClassName("myClass");  // cette méthode retourne une NodeList (un ensemble)
+            var js = content[1].innerHTML;
+            alert(js);
+            */
+            // méthode 2 : using querySelector  
+            var content = document.querySelector(".myClass");  // cette méthode retourne un Node (un seul, le premier rencontré)
+            var js = content.innerHTML;
+            alert(js);
+        }
+
+        //1- fonction getElementById
+        /*
+        var content = document.getElementById("titre").textContent;
+    
+        var details = document.getElementById("github").textContent;
+        alert("content = "+content);
+    
+        alert("details = "+details);
+         */
+        
+         //2- fonction getElementsByTagName
+        /*
+        var tab = document.getElementsByTagName('p');
+        alert("Nombre de paragraphes : "+ tab.length);
+        */
+        
+        //3-fonction querySelector()
+
+       // var par = document.querySelectorAll('p a');
+       
+       //var par = document.querySelector('p a');
+       //alert("Nombre de paragraphes : "+ par);
+
+
+        // getElementsByClassName  vs  querySelectorAll
+        /*
+        var content1 = document.getElementById("github").textContent;  // sans afficher les balises
+        var content2 = document.getElementById("github").innerHTML;
+
+        alert("content1 : textContent"+ content1);
+        alert("content2 : innerHTML"+ content2);
+        */
+
+        // Correction ex2
+        //part 1-2-3
+        /*
+        var tab = document.querySelectorAll('li a');
+        alert(tab.length);
+        var res = "";
+        for(i=0;i<tab.length;i++)
+        {
+            res += tab[i] + "--";
+        }
+        alert("content :"+ res);*/
+
+    </script>
+    
+</body>
+
+
+</html>
