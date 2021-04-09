@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="exo8ApremAvril2.css" />
+
+<html>
+
+<head </head>
+
+<body>
+
+
+
+    <table>
+        <ul id="ul">
+            <li id="1">Lundi</li>
+            <li id="2">Mardi</li>
+            <li id="3">Mercredi</li>
+            <li id="4">Jeudi</li>
+            <li id="5">Vendredi</li>
+            <li id="6">Samedi</li>
+            <li id="7">Dimanche</li>
+        </ul>
+    </table>
+    <form name="semaine">
+        <select name='mySelect'>
+            <option value="0">Selectionnez le jour:</option>
+            <option value="1">Lundi</option>
+            <option value="2">Mardi</option>
+            <option value="3">Mercredi</option>
+            <option value="4">Jeudi</option>
+            <option value="5">Vendredi</option>
+            <option value="6">Samedi</option>
+            <option value="7">Dimanche</option>
+        </select>
+    </form>
+    <input type="button" value='supprimer' onclick="extract()">
+    <script>
+
+        function extract() {
+            //Méthode 1 :
+            //récupération de l'option du select
+            //var indice = document.semaine.mySelect.selectedIndex;
+            //var monChoixValue = document.semaine.mySelect.options[document.semaine.mySelect.selectedIndex].value;
+
+
+            //var enlever = document.getElementById(document.semaine.mySelect.options[document.semaine.mySelect.selectedIndex].value);
+           // var parent = document.getElementById('ul');
+
+           //Méthode 2 : 
+            document.getElementById('ul').removeChild(document.getElementById(document.semaine.mySelect.options[document.semaine.mySelect.selectedIndex].value));
+
+
+
+        }
+    </script>
+
+
+</body>
+
+</html>
