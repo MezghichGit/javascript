@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .newli{
+            color:red;
+        }
+    </style>
+    <title>Workshop 2 Javascript : La Manipulation du DOM</title>
+    <script>
+        function Ajouter() {
+
+            // phase 1 : recherche de l'élément en question
+            var langage = document.formulaire.langage.value;
+           // alert(langage);
+            if (langage.length == 0) {
+                alert("Champs langage vide");
+            }
+
+            // phase 2 : création de l'élément
+            var newli = document.createElement('li');
+
+            // phase 3 : ajout d'attributs
+            newli.id = 'newpoint';
+            var textnewpoint = document.createTextNode(langage);
+            newli.className = 'newli';
+            newli.appendChild(textnewpoint);
+
+           // phase 4 : attacher le nouvel objet créer à l'objet cible
+            var monUl = document.getElementById('ul');
+            monUl.appendChild(newli);
+
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 align="center">Insérer un language de programmation</h1>
+
+    <!-- Exercice Credit -->
+
+    <form name="formulaire">
+        <div align="center">
+            <fieldset style="width: 10%;">
+                <legend>Ajouter un langage:</legend>
+                <table align="left">
+                    <tr>
+                        <td><input type="text" name="langage" placeholder="votre langage?" /></td>
+                        <td><input type="button" value="Ajouter" onclick="Ajouter()" /></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+    </form>
+    <table align="left">
+        <tr>
+            <td>Vous maitriser les langages suivants :</td>
+        </tr>
+    </table>
+    <table align="left">
+        <tr>
+            <td>
+                <ul id="ul" >
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
