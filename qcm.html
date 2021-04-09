@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<html>
+
+<head>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <h1 align="center">Chapitres 3 : Jquery</h1>
+
+    <p>Avant de commencer ce cours vous devez, savoir et maitriser le html le css, et enfin le javascript</p>
+
+
+    <div id="html">
+        <h2>C'est quoi Le HTML?</h2><p style="visibility: hidden;">HTML est le langage de structuration d'une page web</p></div>
+
+    <div id="css"><h2>C'est quoi Le CSS?</h2><p style="visibility: hidden;">CSS est le langage de style d'une page web</p></div>
+
+    <div id="js"><h2>C'est quoi Le Javascript?</h2><p style="visibility: hidden;">Javascript est le langage d'interaction d'une page web</p></div>
+    <script>
+        var h = document.querySelectorAll('h2');
+
+        for (var i = 0; i < h.length; i++) {
+            h[i].addEventListener("click", displayResponse);
+        }
+
+
+        function displayResponse() {
+            var parent = this.parentElement;
+            var fils2 = parent.lastChild;
+            fils2.style.visibility = "visible";
+        }
+    </script>
+</body>
+
+</html>

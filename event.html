@@ -12,14 +12,15 @@
         .c2 {
             border: dashed 2px blue;
         }
-        .c3{
+
+        .c3 {
             border-style: solid;
         }
     </style>
 </head>
 
 <body>
-    <h1 class="c1" align="center">Cours Javascript : Manipulation du DOM</h1>
+    <h1 align="center">Cours Javascript : Manipulation du DOM</h1>
     <h1 class="c2" align="center">Cours Javascript : Les évenments</h1>
 
     <ul>
@@ -28,6 +29,19 @@
         <li class="c3">JS</li>
     </ul>
     <script>
+        var h = document.querySelector('h1');
+        h.addEventListener("click", method1);
+        h.addEventListener("mouseover", method2);
+
+
+        function method1() {
+            alert("Un click");
+        }
+
+        function method2() {
+            alert("Un survol");
+        }
+
         // STEP 1 : je récupére dans un tableaux tous les li
         var t = document.querySelectorAll('li');
 
@@ -41,12 +55,12 @@
             }
 
             t[i].onmouseenter = function () {
-                this.style.fontWeight="bold";
+                this.style.fontWeight = "bold";
                 this.style.color = 'red';
             }
 
             t[i].onmouseleave = function () {
-                this.style.fontWeight="normal";
+                this.style.fontWeight = "normal";
                 this.style.color = 'black';
             }
 
