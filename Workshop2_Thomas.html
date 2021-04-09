@@ -6,39 +6,17 @@
         .newli{
             color:red;
         }
+
+        .newCss{
+            color:blue;
+            text-align: center;
+        }
     </style>
     <title>Workshop 2 Javascript : La Manipulation du DOM</title>
-    <script>
-        function Ajouter() {
-
-            // phase 1 : recherche de l'élément en question
-            var langage = document.formulaire.langage.value;
-           // alert(langage);
-            if (langage.length == 0) {
-                alert("Champs langage vide");
-            }
-
-            // phase 2 : création de l'élément
-            var newli = document.createElement('li');
-
-            // phase 3 : ajout d'attributs
-            newli.id = 'newpoint';
-            var textnewpoint = document.createTextNode(langage);
-            newli.className = 'newli';
-            newli.appendChild(textnewpoint);
-
-           // phase 4 : attacher le nouvel objet créer à l'objet cible
-            var monUl = document.getElementById('ul');
-            monUl.appendChild(newli);
-
-
-        }
-
-    </script>
 </head>
 
 <body>
-    <h1 align="center">Insérer un language de programmation</h1>
+    <h3 align="center" id="cible">Insérer un language de programmation</h3>
 
     <!-- Exercice Credit -->
 
@@ -70,6 +48,46 @@
             </td>
         </tr>
     </table>
+
+    <script>
+
+        // Correction Ex1 du Note4
+        var titre = document.createElement('h1');
+        var textTitre = document.createTextNode("Correction du Workshop 2 : Solution de Thomas");
+        titre.className = "newCss";
+        titre.appendChild(textTitre);
+
+        // recherche de l'element cible
+        var target = document.getElementById("cible");
+        document.body.insertBefore(titre,target);
+
+
+        function Ajouter() {
+
+            // phase 1 : recherche de l'élément en question
+            var langage = document.formulaire.langage.value;
+           // alert(langage);
+            if (langage.length == 0) {
+                alert("Champs langage vide");
+            }
+
+            // phase 2 : création de l'élément
+            var newli = document.createElement('li');
+
+            // phase 3 : ajout d'attributs
+            newli.id = 'newpoint';
+            var textnewpoint = document.createTextNode(langage);
+            newli.className = 'newli';
+            newli.appendChild(textnewpoint);
+
+           // phase 4 : attacher le nouvel objet créer à l'objet cible
+            var monUl = document.getElementById('ul');
+            monUl.appendChild(newli);
+
+
+        }
+
+    </script>
 </body>
 
 </html>
