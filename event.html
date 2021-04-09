@@ -8,11 +8,38 @@
         .c1{
             border: solid 2px red;
         }
+
+        .c2{
+            border: dashed 2px blue;
+        }
     </style>
 </head>
 
 <body>
-    <h1 class="c1" align="center" onmouseover="alert('cc')">Cours Javascript : Les évenments</h1>
+    <h1 class="c1" align="center">Cours Javascript : Manipulation du DOM</h1>
+    <h1 class="c2" align="center">Cours Javascript : Les évenments</h1>
+    <script>
+
+        var tab = document.getElementsByClassName("c1");
+        var el = tab[0];
+
+        el.onclick=function(){
+            //alert('cc');
+            this.textContent = "Jquery";
+        }
+
+        el.onmouseover=function(){
+            //alert('cc');
+            this.textContent = "Ajax";
+        }
+
+        /*
+        function display()
+        {
+            //alert('cc')
+            this.textContent = "Good Bye";
+        }*/
+    </script>
 </body>
 
 </html>
