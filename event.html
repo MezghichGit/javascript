@@ -5,12 +5,15 @@
 <head>
 
     <style>
-        .c1{
+        .c1 {
             border: solid 2px red;
         }
 
-        .c2{
+        .c2 {
             border: dashed 2px blue;
+        }
+        .c3{
+            border-style: solid;
         }
     </style>
 </head>
@@ -18,17 +21,48 @@
 <body>
     <h1 class="c1" align="center">Cours Javascript : Manipulation du DOM</h1>
     <h1 class="c2" align="center">Cours Javascript : Les évenments</h1>
+
+    <ul>
+        <li class="c3">HTML</li>
+        <li class="c3">CSS</li>
+        <li class="c3">JS</li>
+    </ul>
     <script>
+        // STEP 1 : je récupére dans un tableaux tous les li
+        var t = document.querySelectorAll('li');
+
+
+        //STEP 2 : parcours de tous les elements et assignation d'évenements : onclick, onmouseenter, onmouseleave
+        for (var i = 0; i < t.length; i++) {
+
+            t[i].onclick = function () {
+                //this.style.visibility = 'hidden';
+                this.remove();
+            }
+
+            t[i].onmouseenter = function () {
+                this.style.fontWeight="bold";
+                this.style.color = 'red';
+            }
+
+            t[i].onmouseleave = function () {
+                this.style.fontWeight="normal";
+                this.style.color = 'black';
+            }
+
+
+        }
+
 
         var tab = document.getElementsByClassName("c1");
         var el = tab[0];
 
-        el.onclick=function(){
+        el.onclick = function () {
             //alert('cc');
             this.textContent = "Jquery";
         }
 
-        el.onmouseover=function(){
+        el.onmouseover = function () {
             //alert('cc');
             this.textContent = "Ajax";
         }
