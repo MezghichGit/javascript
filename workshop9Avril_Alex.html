@@ -4,13 +4,13 @@
 
 <html>
 
-<head </head>
+<head> </head>
 
-<body>
+<body><p>DOM</p><div>
 
+    <h1>Correction ex 2 </h1>
 
-
-    <table>
+</div><table>
         <ul id="ul">
             <li id="1">Lundi</li>
             <li id="2">Mardi</li>
@@ -20,8 +20,7 @@
             <li id="6">Samedi</li>
             <li id="7">Dimanche</li>
         </ul>
-    </table>
-    <form name="semaine">
+    </table><form name="semaine">
         <select name='mySelect'>
             <option value="0">Selectionnez le jour:</option>
             <option value="1">Lundi</option>
@@ -32,9 +31,28 @@
             <option value="6">Samedi</option>
             <option value="7">Dimanche</option>
         </select>
-    </form>
-    <input type="button" value='supprimer' onclick="extract()">
-    <script>
+    </form><input type="button" value='supprimer' onclick="extract()"><script> // exercice sur childNodes
+     var fils = document.body.childNodes;
+      alert(fils.length);
+       document.writeln("<br/>");
+       document.writeln(fils[0] + "<br/>");
+       document.writeln(fils[1] + "<br/>");
+       document.writeln(fils[2] + "<br/>");
+       document.writeln(fils[3] + "<br/>");
+       document.writeln(fils[4] + "<br/>");
+       document.writeln(fils[5] + "<br/>");
+       document.writeln(fils[6] + "<br/>");
+       document.writeln(fils[7] + "<br/>");
+       document.writeln(fils[8] + "<br/>");
+       /*
+       for(var i = 0; i<fils.length; i++)
+       {
+           document.writeln(fils[i].nodeValue + "<br/>");
+       }*/
+
+        var h = document.querySelector('h1');
+        var parent = h.parentNode;
+        parent.style.color = "red";
 
         function extract() {
             //Méthode 1 :
