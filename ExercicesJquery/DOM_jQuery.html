@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<html>
+
+<head>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script>
+    
+
+        $(document).ready(function () {
+        // alert( $("#js").html()  ); // innerHTML
+
+         //alert( $("#js").text()  ); // textContent
+
+                //$("#js").html("<h2>Cours suivant Ajax </h2>") ;
+
+
+                // première méthode : le selecteur se trouve à la fin
+                $("<h2>(Fin de paragraphe)</h2>").prependTo($("#js"));
+
+                // deuxième méthode : le selcteur se trouve au début
+                $("#html").append("<h2>Les balises et les attribus</h2>");
+
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <h1 align="center">Chapitres 3 : Jquery</h1>
+
+    <p>Avant de commencer ce cours vous devez, savoir et maitriser le html le css, et enfin le javascript</p>
+
+    <p id="html">C'est quoi Le HTML?</p>
+    <p id="css">C'est quoi Le CSS?</p>
+    <p id="js">C'est quoi Le <b>Javascript</b>?</p>
+
+</body>
+
+</html>

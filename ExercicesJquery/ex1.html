@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<html>
+​
+<head>
+    <script type="text/javascript" src="jquery.js"></script>
+​
+​
+    <script>
+        $(document).ready(function() {
+
+            //Exercice 1
+
+            //$("#mardi").mouseover(function () { alert("mouseover") });
+            //$("#mardi").click(function () { alert("click") });
+
+            //Exercie 2
+
+            $("#mardi").click(function () { 
+                
+                
+                $(this).html("Alex est né un Mardi!");
+            
+            
+            });
+
+
+
+            $("em").click(function(){
+                $(this).replaceWith("<strong>"+$(this).text()+"</strong>");
+            });
+
+
+        });
+    </script>
+​
+​
+​
+</head>
+​
+<body>
+    <em>Exercices jQuery</em>
+    <ul>
+        <li id='lundi'>lundi</li>
+        <li id="mardi" style="border:solid">mardi</li>
+        <li id='mercredi'>mercredi</li>
+        <li id='jeudi'>jeudi</li>
+        <li id='vendredi'>vendredi</li>
+        <li id='samedi'>samedi</li>
+        <li id='dimanche'>dimanche</li>
+    </ul>
+</body>
+​
+</html>
